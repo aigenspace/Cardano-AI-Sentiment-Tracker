@@ -46,8 +46,23 @@ python test_sentiment.py
 
 The prototype sentiment analysis results are visualized in the following plots:
 
+#### Social Media data:
+See https://twitter.com/aigenspace for the original posts.
+
+Tracking social media sentiment swings:
+
+<img src="images/TeddySwap_sentiment_dates_chart.png" width="700">
+
+Sentiment distributions over the last month:
+
+<img src="images/Iagon_sentiment_pie_chart.png" width="700">
+<img src="images/DexHunter_sentiment_pie_chart.png" width="700">
+
+
+#### News data:  
+
+Tracking the sentiment in news headlines over time:  
+
 ![Cardano Sentiment Scores Plot](images/Cardano_sentiment_scores_plot.png)
 
 ![ADA Sentiment Scores Plot](images/ADA_sentiment_scores_plot.png)
-
-This plot illustrates the monthly positive and negative sentiment scores.
