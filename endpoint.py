@@ -1,4 +1,4 @@
-from sentiment import SentimentAnalysis
+from sentiment import SentimentAnalysisDistilBERT, SentimentAnalysisCryptoBERT
 from keywords import KeywordFiltering
 from flask import Flask, request, jsonify
 
@@ -6,7 +6,7 @@ class SentimentEndpoint:
     def __init__(self, app: Flask):
         # Initialize the SentimentEndpoint class
         self.app = app
-        self.sa = SentimentAnalysis()
+        self.sa = SentimentAnalysisDistilBERT()
         self.kf = KeywordFiltering()
 
     def display_analysis(self, analysis: dict):

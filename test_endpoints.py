@@ -1,4 +1,6 @@
 import requests
+import json
+import utils
 
 # Testing the /analyze endpoint of the Flask application
 def test_analyze_endpoint():
@@ -7,14 +9,52 @@ def test_analyze_endpoint():
 
     # Data to be sent in the request
     data = {"text": "Cardano is the best!"}
-
     # Sending a POST request to the /analyze endpoint
     response = requests.post(url, json=data)
 
     # Printing the JSON response received from the server
     print("Response from /analyze endpoint:")
     print(response.json())
-    print()
+
+
+def test_analyze_endpoint_tweets(keyword, data):
+    # URL of the /analyze endpoint
+    url = "http://localhost:5000/analyze"
+    # Sending a POST request to the /analyze endpoint
+    scores = {}
+    for tweet in data['Tweets']:
+        input = {"text": tweet["Content"]}
+        response = requests.post(url, json=input)
+        print("date: ", tweet["Timestamp"])
+        print("score: ", response.json())
+        for score in response.json():
+            label = score['label']
+            if label not in scores:
+                scores[label] = []
+            scores[label].append(score['score'])
+    json.dump(scores, open(f'{keyword}_sentiment_scores.json', 'w'))
+
+
+def test_analyze_endpoint_date_tweets(keyword, data):
+    # URL of the /analyze endpoint
+    url = "http://localhost:5000/analyze"
+    # Sending a POST request to the /analyze endpoint
+    scores = {}
+    for tweet in data['Tweets']:
+        day = str(utils.get_date_from_timestamp(tweet['Timestamp']))
+        if scores.get(day) is None:
+            scores[day] = {}
+        input = {"text": tweet['Content']}
+        response = requests.post(url, json=input)
+        for score in response.json():
+            print(score)
+            label = score['label']
+            if label not in scores[day]:
+                scores[day][label] = []
+            scores[day][label].append(score['score'])
+    print(scores)
+    json.dump(scores, open(f'{keyword}_date_sentiment_scores.json', 'w'))
+
 
 # Testing the /filter endpoint of the Flask application
 def test_filter_endpoint():
