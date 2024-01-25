@@ -42,11 +42,11 @@ Use the `test_sentiment.py` script to perform sentiment analysis on the provided
 python test_sentiment.py
 ```
 
-### Visualization Demo
+## Visualization Demos
 
 The prototype sentiment analysis results are visualized in the following plots:
 
-#### Social Media data:
+### Social Media data:
 See https://twitter.com/aigenspace for the original posts.
 
 Tracking social media sentiment swings:
@@ -59,7 +59,7 @@ Sentiment distributions over the last month:
 <img src="images/DexHunter_sentiment_pie_chart.png" width="700">
 
 
-#### News data:  
+### News data:  
 
 Tracking the sentiment in news headlines over time:  
 
