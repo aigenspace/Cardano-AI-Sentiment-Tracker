@@ -1,5 +1,10 @@
 # Cardano AI Sentiment Tracker
 
+## Overview
+
+<img src="Cardano_AI_sentiment_overview.png" width="800">
+
+
 ## Introduction
 Informed decision-making is important for both traders and investors. Although market sentiment trackers are widely used in traditional finance, the Cardano community lacks a dedicated tool designed to analyze the sentiment on topics and projects in its ecosystem. The Cardano AI Sentiment Tracker aims to provide the Cardano community with a reliable sentiment analysis tool tailored to their needs. Driven by artificial intelligence, this tool aims to become comprehensive resource for tracking market sentiments on various topics surrounding the Cardano ecosystem.
 
