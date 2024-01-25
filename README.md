@@ -2,7 +2,7 @@
 
 ## Overview
 
-<img src="Cardano_AI_sentiment_overview.png" width="800">
+<img src="images/Cardano_AI_sentiment_overview.png" width="800">
 
 
 ## Introduction
@@ -46,8 +46,8 @@ python test_sentiment.py
 
 The prototype sentiment analysis results are visualized in the following plots:
 
-![Cardano Sentiment Scores Plot](Cardano_sentiment_scores_plot.png)
+![Cardano Sentiment Scores Plot](images/Cardano_sentiment_scores_plot.png)
 
-![ADA Sentiment Scores Plot](ADA_sentiment_scores_plot.png)
+![ADA Sentiment Scores Plot](images/ADA_sentiment_scores_plot.png)
 
 This plot illustrates the monthly positive and negative sentiment scores.
